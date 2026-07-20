@@ -46,7 +46,9 @@ public class Bebida {
 	}
 
 	public void setLitros(double litros) {
-		this.litros = litros;
+		if (litros >= 0) {
+			this.litros = litros;
+		}
 	}
 
 	public int getQuantidade() {
@@ -54,7 +56,10 @@ public class Bebida {
 	}
 
 	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
+		if (quantidade >= 0) {
+			this.quantidade = quantidade;
+		}
+
 	}
 
 	public Date getValidade() {
@@ -62,7 +67,9 @@ public class Bebida {
 	}
 
 	public void setValidade(Date validade) {
-		this.validade = validade;
+		if (validade != null) {
+			this.validade = validade;
+		}
 	}
 
 }

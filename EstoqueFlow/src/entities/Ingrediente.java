@@ -59,7 +59,7 @@ public class Ingrediente {
 	}
 
 	public void setQuantidade(int quantidade) {
-		if (quantidade != 0) {
+		if (quantidade >= 0) {
 			this.quantidade = quantidade;
 		}
 
