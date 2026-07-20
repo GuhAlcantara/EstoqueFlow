@@ -8,6 +8,9 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
+		System.out.println("BEM VINDO AO GERENCIADOR DE ESTOQUE  \n\n******* ESTOQUEFLOW *******");
+		System.out.println();
+	
 		
 		
 		
