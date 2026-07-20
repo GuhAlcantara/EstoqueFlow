@@ -6,13 +6,12 @@ public class Prato {
 	private String nome;
 	private int quantidade;
 	private Date validade;
-	
+
 	{
-		
+
 	}
-	
+
 	public Prato() {
-		
 	}
 
 	public Prato(String nome, int quantidade, Date validade) {
@@ -26,7 +25,11 @@ public class Prato {
 	}
 
 	public void setName(String nome) {
-		this.nome = nome;
+		if (nome != null) {
+			this.nome = nome;
+		}
+	}
+
 	}
 
 	public int getQuantidade() {
@@ -34,7 +37,9 @@ public class Prato {
 	}
 
 	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
+		if (quantidade >= 0) {
+			this.quantidade = quantidade;
+		}
 	}
 
 	public Date getValidade() {
@@ -42,7 +47,9 @@ public class Prato {
 	}
 
 	public void setValidade(Date validade) {
-		this.validade = validade;
+		if (validade != null) {
+			this.validade = validade;
+		}
 	}
-	
+
 }
