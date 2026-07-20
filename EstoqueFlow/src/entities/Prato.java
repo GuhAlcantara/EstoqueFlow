@@ -30,8 +30,6 @@ public class Prato {
 		}
 	}
 
-	}
-
 	public int getQuantidade() {
 		return quantidade;
 	}

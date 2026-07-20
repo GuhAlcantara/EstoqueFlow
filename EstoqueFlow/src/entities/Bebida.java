@@ -30,7 +30,7 @@ public class Bebida {
 	}
 
 	public void setNome(String nome) {
-		this.nome = nome;
+		if (nome != null) {this.nome = nome;}
 	}
 
 	public String getMarca() {
@@ -38,7 +38,7 @@ public class Bebida {
 	}
 
 	public void setMarca(String marca) {
-		this.marca = marca;
+		if(marca != null) {this.marca = marca;}
 	}
 
 	public double getLitros() {
