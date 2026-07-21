@@ -3,10 +3,13 @@ package entities;
 import java.util.Date;
 
 public class Insumos {
+	private static int insumosID;
 	private String nome, marca, lote;
 	private int quantidade;
 	private Date validade;
 	private double peso;
+	
+	
 	{
 
 	}

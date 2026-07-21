@@ -3,6 +3,8 @@ package entities;
 import java.util.Date;
 
 public class Fornecedor {
+
+	private static int fornecedorID;
 	private String nomeRepresentante, empresa, telefone;
 	private Date diaDePedido;
 	{

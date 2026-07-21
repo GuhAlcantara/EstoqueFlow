@@ -3,7 +3,8 @@ package entities;
 import java.util.Date;
 
 public class Bebida {
-
+	
+	private static int bebidasID;
 	private String nome, marca;
 	private double litros;
 	private Date validade;

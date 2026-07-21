@@ -3,6 +3,7 @@ package entities;
 import java.util.Date;
 
 public class Ingrediente {
+	private static int ingredienteID;
 	private String nome, marca, lote;
 	private int quantidade;
 	private Date validade;

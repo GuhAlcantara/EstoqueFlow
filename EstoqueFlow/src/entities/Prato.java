@@ -3,6 +3,7 @@ package entities;
 import java.util.Date;
 
 public class Prato {
+	private static int pratoID;
 	private String nome;
 	private int quantidade;
 	private Date validade;
