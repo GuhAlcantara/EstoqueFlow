@@ -11,8 +11,11 @@ public class Fornecedor {
 
 	}
 
-	public Fornecedor() {
 
+	public Fornecedor(String nomeRepresentante, String empresa, String telefone) {
+		this.nomeRepresentante = nomeRepresentante;
+		this.empresa = empresa;
+		this.telefone = telefone;
 	}
 
 	public Fornecedor(String nomeRepresentante, String empresa, String telefone, Date diaDePedido) {
@@ -62,4 +65,12 @@ public class Fornecedor {
 		}
 	}
 
+	@Override
+	public String toString() {
+		return "Fornecedor : \n"
+				+"Vendedor: " + nomeRepresentante +"\n"
+				+"Empresa:  " + empresa+"\n"
+				+ "Telefone: " + telefone ;
+
+	}
 }

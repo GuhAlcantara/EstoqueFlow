@@ -17,9 +17,9 @@ public class Prato extends Produto {
 
 	@Override
 	public String toString() {
-		return "Produto Cadastrado: \n"
-				+"Nome: " + nome
-				+ "Quantidade: " + pratoQuantidade
+		return "Prato : \n"
+				+"Nome: " + nome + "\n"
+				+ "Quantidade: " + pratoQuantidade + "\n"
 				+"Data de Validade: " + dataValidade;
 	}
 }

@@ -94,8 +94,8 @@ public class Produto {
 
     @Override
     public String toString() {
-        return "Produto Cadastrado: \n"
-                +"Nome: " + nome
+        return "Produto : \n"
+                +"Nome: " + nome + "\n"
                 +"Data de Validade: " + dataValidade;
     }
 }

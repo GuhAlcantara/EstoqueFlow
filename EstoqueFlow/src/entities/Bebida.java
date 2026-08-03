@@ -20,11 +20,11 @@ public class Bebida extends Produto {
 
 	@Override
 	public String toString() {
-		return "Produto Cadastrado: \n"
-				+"Nome: " + nome
-				+"Marca:" + marca
-				+"Lote: " + lote
-				+"Quantidade: " + miliLitros
+		return "Bebida : \n"
+				+"Nome: " + nome + "\n"
+				+"Marca:" + marca + "\n"
+				+"Lote: " + lote + "\n"
+				+"Quantidade: " + miliLitros + "\n"
 				+"Data de Validade: " + dataValidade;
 	}
 }
