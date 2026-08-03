@@ -2,53 +2,24 @@ package entities;
 
 import java.util.Date;
 
-public class Prato {
-	private static int pratoID;
-	private String nome;
-	private int quantidade;
-	private Date validade;
+public class Prato extends Produto {
+
+	private double pratoQuantidade;
 
 	{
 
 	}
 
-	public Prato() {
+	public Prato(String nome,double pratoQuantidade, Date dataValidade) {
+		super(nome, dataValidade);
+		this.pratoQuantidade = pratoQuantidade;
 	}
 
-	public Prato(String nome, int quantidade, Date validade) {
-		this.nome = nome;
-		this.quantidade = quantidade;
-		this.validade = validade;
+	@Override
+	public String toString() {
+		return "Produto Cadastrado: \n"
+				+"Nome: " + nome
+				+ "Quantidade: " + pratoQuantidade
+				+"Data de Validade: " + dataValidade;
 	}
-
-	public String getName() {
-		return nome;
-	}
-
-	public void setName(String nome) {
-		if (nome != null) {
-			this.nome = nome;
-		}
-	}
-
-	public int getQuantidade() {
-		return quantidade;
-	}
-
-	public void setQuantidade(int quantidade) {
-		if (quantidade >= 0) {
-			this.quantidade = quantidade;
-		}
-	}
-
-	public Date getValidade() {
-		return validade;
-	}
-
-	public void setValidade(Date validade) {
-		if (validade != null) {
-			this.validade = validade;
-		}
-	}
-
 }
