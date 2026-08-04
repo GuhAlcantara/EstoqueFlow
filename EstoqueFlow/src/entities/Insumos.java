@@ -1,11 +1,12 @@
 package entities;
 
-import java.util.Date;
+import java.time.LocalDate;
+
 
 public class Insumos extends Produto{
 	private double insumoQuantidade;
 
-	public Insumos(String nome,double insumoQuantidade, Date dataValidade) {
+	public Insumos(String nome, double insumoQuantidade, LocalDate dataValidade) {
 		super(nome, dataValidade);
 		this.insumoQuantidade = insumoQuantidade;
 	}

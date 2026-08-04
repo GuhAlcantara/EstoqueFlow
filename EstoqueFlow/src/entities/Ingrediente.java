@@ -1,15 +1,17 @@
 package entities;
 
-import java.util.Date;
+import java.time.LocalDate;
+
 
 public class Ingrediente extends Produto {
 
 	private double ingredienteQuantidade;
 
-	public Ingrediente(String nome, double ingredienteQuantidade, Date dataValidade ) {
+	public Ingrediente(String nome, double ingredienteQuantidade, LocalDate dataValidade ) {
 		super(nome, dataValidade);
 		this.ingredienteQuantidade  = ingredienteQuantidade;
 	}
+
 
 	@Override
 	public String toString() {

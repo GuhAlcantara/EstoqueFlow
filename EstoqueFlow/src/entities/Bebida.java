@@ -1,6 +1,6 @@
 package entities;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Bebida extends Produto {
 
@@ -12,7 +12,7 @@ public class Bebida extends Produto {
 
 	}
 
-	public Bebida(String nome, String marca,String lote, double miliLitros, Date dataValidade) {
+	public Bebida(String nome, String marca,String lote, double miliLitros, LocalDate dataValidade) {
 		super(nome, lote, marca, miliLitros, dataValidade);
 		this.miliLitros = miliLitros;
 

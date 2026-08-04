@@ -1,20 +1,22 @@
 package entities;
 
-import java.util.Date;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Produto {
     protected String nome, lote, marca;
     protected double quantidade, pesoProduto;
-    protected Date dataValidade;
+    protected LocalDate dataValidade;
 
 
-    public Produto(String nome,Date dataValidade) {
+    public Produto(String nome, LocalDate dataValidade) {
         this.nome = nome;
         this.dataValidade = dataValidade;
     }
 
-            // CONTRUTOR PARA PRODUTOS EM ***QUATIDADE****
-    public Produto(String nome, String lote, String marca, double quantidade, Date data) {
+            // CONTRUTOR PARA PRODUTOS EM ***QUANTIDADE****
+    public Produto(String nome, String lote, String marca, double quantidade, LocalDate data) {
         this.nome = nome;
         this.lote = lote;
         this.marca = marca;
@@ -23,7 +25,7 @@ public class Produto {
     }
 
             // CONSTRUTOR PARA PRODUTOS EM  ***PESO***
-    public Produto(String nome, String lote, String marca, double quantidade, double pesoProduto, Date data) {
+    public Produto(String nome, String lote, String marca, double quantidade, double pesoProduto, LocalDate data) {
         this.nome = nome;
         this.lote = lote;
         this.marca = marca;
@@ -82,19 +84,24 @@ public class Produto {
         }
     }
 
-    public Date getDataValidade() {
+    public LocalDate getDataValidade() {
         return dataValidade;
     }
 
-    public void setValidade(Date dataValidade) {
+    public void setValidade(LocalDate dataValidade) {
         if (dataValidade != null) {
             this.dataValidade = dataValidade;
         }
     }
 
+    public String getDataValidadeFormat(){
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        return dataValidade.format(formatter);
+    }
+
     @Override
     public String toString() {
-        return "Produto : \n"
+        return "****Produto****\n"
                 +"Nome: " + nome + "\n"
                 +"Data de Validade: " + dataValidade;
     }

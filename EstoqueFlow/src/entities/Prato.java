@@ -1,6 +1,6 @@
 package entities;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Prato extends Produto {
 
@@ -10,7 +10,7 @@ public class Prato extends Produto {
 
 	}
 
-	public Prato(String nome,double pratoQuantidade, Date dataValidade) {
+	public Prato(String nome,double pratoQuantidade, LocalDate dataValidade) {
 		super(nome, dataValidade);
 		this.pratoQuantidade = pratoQuantidade;
 	}

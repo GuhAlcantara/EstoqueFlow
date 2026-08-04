@@ -1,48 +1,61 @@
 package application;
 
+import entities.Ingrediente;
+import entities.Produto;
+
+import java.time.format.DateTimeParseException;
 import java.util.Locale;
 import java.util.Scanner;
-
-import entities.MenuCadastro;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Program {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("BEM VINDO AO GERENCIADOR DE ESTOQUE  \n\n******* ESTOQUEFLOW *******");
 
-		System.out.println("Escolha a Opçao");
-		System.out.println("1 - Cadastro");
-		System.out.println("2 - Pesquisar");
-		System.out.println("3 - Ajuda");
-		System.out.println("4 - Sair");
+		LocalDate validade = entradaDeValidade(sc);
 
-		System.out.print("Digite a opçao: ");
-		int opcaoMenu = sc.nextInt();
+		Produto produto = new Ingrediente("Salsinha" , 10 , validade);
 
-		switch (opcaoMenu) {
-		case 1: {
-			MenuCadastro menuCadastro = new MenuCadastro();
-			break;
-		}
+		System.out.println("Cadastro Feito com Sucesso \n " + produto.toString());
 
-		case 2: {
-		
-			break;
-		}
-		case 3: {
-			
-			break;
-		}
 
-		default:
-			System.out.println("Opçao Invalida. Favor escolher Opcao Valida.");
-			;
-		}
+
+
 
 		sc.close();
 
 	}
+	public static LocalDate entradaDeValidade(Scanner sc){
 
+		LocalDate dataValidade = null;
+		boolean dataValida = false;
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+		while(!dataValida){
+			System.out.print("Digite a Data de Validade (dd/MM/yyyy): ");
+			String entradaUsuario = sc.nextLine();
+
+			try{ 	// CONVERTENDO DATE PARA STRING
+				dataValidade = LocalDate.parse(entradaUsuario , formatter );
+
+				if (dataValidade.isBefore(LocalDate.now())){
+					System.out.println("ATENÇÃO: PRODUTO VENCIDO");
+					return null;
+				} else {
+					dataValida = true;
+
+				}
+
+			}catch (DateTimeParseException e ) {
+				System.out.println("Formato de data invalido! PADRAO dd/MM/yyyy");
+
+			}
+
+		}
+
+        return dataValidade;
+    }
 }
